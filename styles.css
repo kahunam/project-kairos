@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;700&display=swap");
+
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set up the body */
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Style for each slide */
+section {
+  background-color: white;
+  width: 210mm; /* A4 width */
+  height: 297mm; /* A4 height */
+  margin: 20px auto;
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  page-break-after: always;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+section:first-of-type h1::before {
+  content: url('img/kahunam-logo-2.svg');
+  width: 140px;
+  height: 140px; /* Maintains aspect ratio */
+  display: block;
+  margin-bottom:30px;
+}
+section:first-of-type h1 {
+  font-size:48px;
+  font-weight: 300;
+}
+
+/* First section styles */
+section:first-of-type {
+  /* background-image: linear-gradient(287deg, #11f8cd 1%, #000b6a 89%); */
+  /* background: linear-gradient(to right, #0000ff, #00ff00); */
+  color: white;
+ background-image: url("img/kahunam-bg.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+*/
+}
+
+/* Left column styles */
+section > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Right column styles */
+section > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+/* Basic typography */
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 13px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+/* List styles */
+ul,
+ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+li {
+  font-size: 13px;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+/* Image styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Print-specific styles */
+@media print {
+  body {
+    /* background-color: white; */
+  }
+
+  section {
+    box-shadow: none;
+    margin: 0;
+    page-break-after: always;
+  }
+}
